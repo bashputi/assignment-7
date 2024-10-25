@@ -63,4 +63,20 @@ UPDATE students SET status = 'Awarded' WHERE (frontend_mark + backend_mark) = (
     SELECT MAX(frontend_mark + backend_mark) FROM students);
 
 -- query 4: Delete all courses that have no students enrolled.
+DELETE FROM courses WHERE course_id NOT IN (
+    SELECT DISTINCT course_id FROM enrollment
+);
 
+-- query 5: Retrieve the names of students using a limit of 2, starting from the 3rd student.
+SELECT student_name FROM students ORDER By student_id LIMIT 2 OFFSET 2;
+
+-- query 6: Retrieve the course names and the number of students enrolled in each course.
+SELECT c.course_name, COUNT(e.student_id) AS students_enrolled
+ FROM courses c LEFT Join enrollment e ON c.course_id = e.course_id
+  GROUP BY c.course_name;
+
+-- query 7: Calculate and display the average age of all students.
+SELECT ROUND(AVG(age), 2) AS average_age From students;
+
+-- query 8: Retrieve the names of students whose email addresses contain 'example.com'.
+SELECT student_name FROM students WHERE email ILIKE '%example.com%';
