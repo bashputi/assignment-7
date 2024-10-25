@@ -10,18 +10,20 @@ A database schema in postgreSQL is a namespace within a database that helps orga
 
 ## 3: Explain the primary key and foreign key concepts in PostgreSQL.
 - **Primary Key**: A primary key is a unique identifier for each record in a table. Each table can have only one primary key, which ensures that each row in the table is unique.
--**Foreign Key**: A foreign key is a field (or group of fields) in one tables that uniquely indentifies a row of another table. Foreign keys enforce a link between tables, establishing relationships and maintaining referential integrity.
+
+- **Foreign Key**: A foreign key is a field (or group of fields) in one tables that uniquely indentifies a row of another table. Foreign keys enforce a link between tables, establishing relationships and maintaining referential integrity.
 
 ## 4: What is the difference between the VARCHAR and CHAR data types?
--**VERCHAR**: A variable-length string data type that can store up to a specified number of characters. It uses only as much space as necessary for each entry, making it space-efficient.
--**CHAR**: A fixed-length string data type. It always reserves the specified number of characters, padding with spaces if necessary. It can be less efficient in terms of storage but is useful for data with a consistent length requirement.
+- **VERCHAR**: A variable-length string data type that can store up to a specified number of characters. It uses only as much space as necessary for each entry, making it space-efficient.
+
+- **CHAR**: A fixed-length string data type. It always reserves the specified number of characters, padding with spaces if necessary. It can be less efficient in terms of storage but is useful for data with a consistent length requirement.
 
 ## 5: Explain the purpose of the WHERE clause in a SELECT statement.
 The 'WHERE' clause filters records returned by 'SELECT' statement, allowing only rows that meet specified conditions to be included in the results. This clause is crucial for retrieving specific data rather than the entire dataset.
 
 ## 6: What are the LIMIT and OFFSET clauses used for?
--**LIMIT**: Restricts the number of rows returned in a query, useful for pagination and retrieving a specific subset of data.
-_**OFFSET**: Skips a specified number of rows before beginning to return data, commonly used with 'LIMIT' to implement pagination.
+- **LIMIT**: Restricts the number of rows returned in a query, useful for pagination and retrieving a specific subset of data.
+- **OFFSET**: Skips a specified number of rows before beginning to return data, commonly used with 'LIMIT' to implement pagination.
 
 ## 7: How can you perform data modification using UPDATE statements?
 The 'UPDATE' statement modifies existing records in a table. By specifying the table, the fields to update, and an optional 'WHERE' clause, you can change data selectively. WIthout a "WHERE' clause, all rows in the table will be updated.
